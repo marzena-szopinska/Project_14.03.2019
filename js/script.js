@@ -25,3 +25,15 @@
 //     </div>
 //   </div>
 // </section>
+
+
+// targeting elements
+let body = document.querySelector('body');
+// creating elements
+const header = document.createElement('header');
+const sectionMainWork = document.createElement('section');
+const sectionFeaturedWork = document.createElement('section');
+
+body.appendChild(header);
+body.appendChild(sectionMainWork);
+body.appendChild(sectionFeaturedWork);
