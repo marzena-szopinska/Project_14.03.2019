@@ -1,26 +1,3 @@
-
-// <section class="featured-work">
-//   <h2>Featured Work</h2>
-//   <div class="image-container">
-//     <div class="image">
-//       <img src="images/1.jpeg" alt="image of an architecure">
-//       <p class="title">Title</p>
-//       <a href="#">link</a>
-//     </div>
-//     <div class="image">
-//       <img src="images/2.jpeg" alt="image of an architecure">
-//       <p class="title">Title</p>
-//       <a href="#">link</a>
-//     </div>
-//     <div class="image">
-//       <img src="images/3.jpeg" alt="image of an architecure">
-//       <p class="title">Title</p>
-//       <a href="#">link</a>
-//     </div>
-//   </div>
-// </section>
-
-
 // targeting elements
 const body = document.querySelector('body');
 
@@ -56,3 +33,36 @@ body.appendChild(mainWorkSection);
 mainWorkSection.appendChild(mainImg);
 
 // **************** Featured Work Section *********************
+const featuredWorkSection = document.createElement('section');
+featuredWorkSection.setAttribute('class', 'featured-work');
+// create h2 element and add text to it
+const secondTitle = document.createElement('h2');
+const secondTitileText = document.createTextNode('Featured Work');
+secondTitle.appendChild(secondTitileText);
+// add section and the header to the DOM
+body.appendChild(featuredWorkSection);
+featuredWorkSection.appendChild(secondTitle);
+// create div container for images and add class to it
+const imgContainer = document.createElement('div');
+imgContainer.setAttribute('class', 'image-container');
+featuredWorkSection.appendChild(imgContainer);
+// create 3 images
+for(let i = 1; i <= 3; i++){
+  const imgBox = document.createElement('div');
+  imgBox.setAttribute('class', 'image');
+  const image = document.createElement('img');
+  image.setAttribute('src', 'images/' + i + '.jpeg');
+  image.setAttribute('alt', 'image of an architecure');
+  const titleImg = document.createElement('p');
+  let titleImgText = document.createTextNode('Title');
+  titleImg.appendChild(titleImgText);
+  const linkImg = document.createElement('a');
+  linkImg.setAttribute('href', '#');
+  let linkText = document.createTextNode('link');
+  linkImg.appendChild(linkText);
+  // add all elements to the DOM
+  imgContainer.appendChild(imgBox);
+  imgBox.appendChild(image);
+  imgBox.appendChild(titleImg);
+  imgBox.appendChild(linkImg);
+}
