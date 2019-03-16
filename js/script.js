@@ -28,12 +28,29 @@
 
 
 // targeting elements
-let body = document.querySelector('body');
-// creating elements
+const body = document.querySelector('body');
+
+// **************** Header *********************
+// create header element
 const header = document.createElement('header');
+// create h1 element and add text to it
+const title = document.createElement('h1');
+const titleText = document.createTextNode('Marzena Szopinska');
+// push the text inside h1 element
+title.appendChild(titleText);
+// create h3 element and add text to it
+const subtitile = document.createElement('h3');
+const subtitleText = document.createTextNode('Front-End Developer');
+// push the text inside h3 element
+subtitile.appendChild(subtitleText);
+
+// add the header to the DOM
+body.appendChild(header);
+header.appendChild(title);
+header.appendChild(subtitile);
+
 const sectionMainWork = document.createElement('section');
 const sectionFeaturedWork = document.createElement('section');
-
-body.appendChild(header);
+// adding element to the DOM
 body.appendChild(sectionMainWork);
 body.appendChild(sectionFeaturedWork);
