@@ -1,6 +1,6 @@
 // targeting elements
 const body = document.querySelector('body');
-
+const script = document.querySelector('script');
 // **************** Header *********************
 // create header element
 const header = document.createElement('header');
@@ -15,7 +15,7 @@ const subtitleText = document.createTextNode('Front-End Developer');
 // push the text inside h3 element
 subtitile.appendChild(subtitleText);
 // add the header to the DOM
-body.appendChild(header);
+body.insertBefore(header, script);
 header.appendChild(title);
 header.appendChild(subtitile);
 
@@ -29,7 +29,7 @@ mainImg.setAttribute('src', 'images/main.jpeg');
 mainImg.setAttribute('alt', 'image of an architecutre plan');
 mainImg.setAttribute('class', 'main-picture');
 // add element to the DOM
-body.appendChild(mainWorkSection);
+body.insertBefore(mainWorkSection, script);
 mainWorkSection.appendChild(mainImg);
 
 // **************** Featured Work Section *********************
@@ -40,7 +40,7 @@ const secondTitle = document.createElement('h2');
 const secondTitileText = document.createTextNode('Featured Work');
 secondTitle.appendChild(secondTitileText);
 // add section and the header to the DOM
-body.appendChild(featuredWorkSection);
+body.insertBefore(featuredWorkSection, script);
 featuredWorkSection.appendChild(secondTitle);
 // create div container for images and add class to it
 const imgContainer = document.createElement('div');
@@ -50,15 +50,31 @@ featuredWorkSection.appendChild(imgContainer);
 for(let i = 1; i <= 3; i++){
   const imgBox = document.createElement('div');
   imgBox.setAttribute('class', 'image');
+
   const image = document.createElement('img');
   image.setAttribute('src', 'images/' + i + '.jpeg');
   image.setAttribute('alt', 'image of an architecure');
+
   const titleImg = document.createElement('p');
-  let titleImgText = document.createTextNode('Title');
-  titleImg.appendChild(titleImgText);
   const linkImg = document.createElement('a');
   linkImg.setAttribute('href', '#');
-  let linkText = document.createTextNode('link');
+
+  let text;
+  let atext;
+  if(i === 1){
+    text = 'Voluptatem';
+    atext = 'https://voluptatem.com';
+  } else if(i === 2) {
+    text = 'Reprehenderit';
+    atext = 'https://reprehenderit.com';
+  } else {
+    text = 'Dolorem';
+    atext = 'https://dolorem.com';
+  }
+  let titleImgText = document.createTextNode(text);
+  let linkText = document.createTextNode(atext);
+  // append the right text to the elements
+  titleImg.appendChild(titleImgText);
   linkImg.appendChild(linkText);
   // add all elements to the DOM
   imgContainer.appendChild(imgBox);
