@@ -5,7 +5,45 @@
 }
 
 body {
-    font-size: 1rem;
+    font: normal 1rem/1.5 'Poppins', sans-serif;
     color: #444;
     letter-spacing: 1px;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+header h1, header h3 {
+  font-weight: 200;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.featured-work h2 {
+  font-weight: 400;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+.image {
+  padding: .75rem 0;
 }

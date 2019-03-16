@@ -1,9 +1,27 @@
+// use DRY with creating image elements !!!!!!!!!!!
+
+
 // targeting elements
 const body = document.querySelector('body');
+body.setAttribute('class', 'container');
 const script = document.querySelector('script');
 // **************** Header *********************
 // create header element
 const header = document.createElement('header');
+const logoContainer = document.createElement('div');
+logoContainer.setAttribute('class', 'logoContainer');
+const logo = document.createElement('img');
+logo.setAttribute('src', 'images/logo.png');
+logo.setAttribute('alt', 'logo image');
+logo.setAttribute('class', 'logo');
+header.appendChild(logoContainer);
+logoContainer.appendChild(logo);
+const textContainer = document.createElement('div');
+textContainer.setAttribute('class', 'textContainer');
+header.appendChild(textContainer);
+// create horizontal rule
+const horizontalRule = document.createElement('hr');
+header.appendChild(horizontalRule);
 // create h1 element and add text to it
 const title = document.createElement('h1');
 const titleText = document.createTextNode('Marzena Szopinska');
@@ -16,8 +34,8 @@ const subtitleText = document.createTextNode('Front-End Developer');
 subtitile.appendChild(subtitleText);
 // add the header to the DOM
 body.insertBefore(header, script);
-header.appendChild(title);
-header.appendChild(subtitile);
+textContainer.appendChild(title);
+textContainer.appendChild(subtitile);
 
 // **************** Main Work Section *********************
 // create section element and add clas to it
