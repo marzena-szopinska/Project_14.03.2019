@@ -1,10 +1,4 @@
-// <header>
-//   <h1>Marzena Szopinska</h1>
-//   <h3>Front-End Developer</h3>
-// </header>
-// <section class="main-work">
-//   <img src="images/main.jpeg" alt="image of an architecutre plan" class="main-picture">
-// </section>
+
 // <section class="featured-work">
 //   <h2>Featured Work</h2>
 //   <div class="image-container">
@@ -43,14 +37,22 @@ const subtitile = document.createElement('h3');
 const subtitleText = document.createTextNode('Front-End Developer');
 // push the text inside h3 element
 subtitile.appendChild(subtitleText);
-
 // add the header to the DOM
 body.appendChild(header);
 header.appendChild(title);
 header.appendChild(subtitile);
 
-const sectionMainWork = document.createElement('section');
-const sectionFeaturedWork = document.createElement('section');
-// adding element to the DOM
-body.appendChild(sectionMainWork);
-body.appendChild(sectionFeaturedWork);
+// **************** Main Work Section *********************
+// create section element and add clas to it
+const mainWorkSection = document.createElement('section');
+mainWorkSection.setAttribute('class', 'main-work');
+// create img element and add src, alt and class attributes to it
+const mainImg = document.createElement('img');
+mainImg.setAttribute('src', 'images/main.jpeg');
+mainImg.setAttribute('alt', 'image of an architecutre plan');
+mainImg.setAttribute('class', 'main-picture');
+// add element to the DOM
+body.appendChild(mainWorkSection);
+mainWorkSection.appendChild(mainImg);
+
+// **************** Featured Work Section *********************
