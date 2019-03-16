@@ -10,6 +10,7 @@ body {
     letter-spacing: 1px;
     padding: 2rem 1rem;
     width: 100%;
+    text-align: center;
 }
 
 img {
@@ -32,9 +33,6 @@ header h1, header h3 {
   text-transform: uppercase;
 }
 
-header {
-  text-align: center;
-}
 
 header, .logoContainer, .textContainer {
   margin-bottom: 1rem;
@@ -64,5 +62,10 @@ section {
 
 .logo {
   width: 30%;
+}
 
+.image img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
 }
