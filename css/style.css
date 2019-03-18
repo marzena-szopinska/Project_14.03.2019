@@ -11,6 +11,11 @@ body {
     padding: 2rem 1rem;
     text-align: center;
     background-image: linear-gradient(rgba(247, 247, 247, .1), rgba(0, 0, 0, .2));
+    -webkit-animation: fadeIn 3s ease-out;
+    -moz-animation: fadeIn 3s ease-out;
+    -ms-animation: fadeIn 3s ease-out;
+    -o-animation: fadeIn 3s ease-out;
+    animation: fadeIn 3s ease-out;
 }
 
 .container {
@@ -62,16 +67,32 @@ section {
 
 .image {
   padding: .75rem 0;
+  width: 100%;
 }
 
 .logo {
   width: 25%;
+  -webkit-animation: spin 2s ease .75s;
+  -moz-animation: spin 2s ease .75s;
+  -ms-animation: spin 2s ease .75s;
+  -o-animation: spin 2s ease .75s;
+  animation: spin 2s ease .75s;
 }
 
 .image img {
   width: 65%;
   display: block;
   margin: 0 auto;
+
+}
+
+.image p {
+  transition: all .7s ease;
+}
+
+.image img:hover + p {
+  color: #7d97ad;
+  text-decoration: line-through;
 }
 
 @media (min-width: 768px) {
@@ -156,4 +177,47 @@ section {
   .logo {
     width: 100%;
   }
+}
+
+
+/* FADE IN ANIMATION  */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* SPIN ANIMATION */
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@-ms-keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
 }
