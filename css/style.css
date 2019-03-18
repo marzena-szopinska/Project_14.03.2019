@@ -67,7 +67,6 @@ section {
 
 .image {
   padding: .75rem 0;
-  width: 100%;
 }
 
 .logo {
@@ -142,6 +141,11 @@ section {
 }
 
 @media (min-width: 1024px) {
+
+  body {
+        height: 1366px;
+  }
+
   hr {
     display: none;
   }
