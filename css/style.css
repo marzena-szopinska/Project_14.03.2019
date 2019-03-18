@@ -9,8 +9,11 @@ body {
     color: #444;
     letter-spacing: 1px;
     padding: 2rem 1rem;
-    width: 100%;
     text-align: center;
+}
+
+.container {
+  width: 100%;
 }
 
 img {
@@ -65,7 +68,91 @@ section {
 }
 
 .image img {
-  width: 70%;
+  width: 65%;
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  header h1, .featured-work h2, .image img {
+    margin-bottom: 1rem;
+  }
+
+  header h3 {
+    margin-bottom: 2.75rem;
+  }
+
+  .container {
+    max-width: 1024px;
+    width: 70%;
+  }
+
+  .main-picture {
+    height: 430px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .image {
+    width: 25%;
+  }
+
+  .image img {
+    width: 100%;
+  }
+
+  .logo {
+    width: 15%;
+  }
+}
+
+@media (min-width: 1024px) {
+  hr {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7d97ad;
+    text-align: right;
+  }
+
+  header h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .container {
+    margin-top: 1rem;
+  }
+
+  .main-work {
+    margin-bottom: 1rem;
+  }
+
+   .logoContainer {
+     width: 10%;
+   }
+
+  .textContainer {
+    width: 70%;
+  }
+
+  .logo {
+    width: 100%;
+  }
 }
